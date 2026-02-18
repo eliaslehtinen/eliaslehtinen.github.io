@@ -14,20 +14,18 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"> -->
+                            <iframe class="img-responsive img-centered" src="https://youtube.com/embed/{{post.youtube-video-id}}" alt="{{ post.alt }}"></iframe>
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>Tools:
-                                    <strong><a href="http://startbootstrap.com">{{ post.tools }}</a>
-                                    </strong>
+                                    <strong>{{ post.tools }}</strong>
                                 </li>
                                 <li>Role:
-                                    <strong><a href="http://startbootstrap.com">{{ post.role }}</a>
-                                    </strong>
+                                    <strong>{{ post.role }}</strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
-                                    </strong>
+                                    <strong>{{ post.project-date }}</strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>

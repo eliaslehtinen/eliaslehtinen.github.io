@@ -5,6 +5,7 @@ layout: default
 modal-id: 1
 date: 2025-01-26
 img: dreams.png
+youtube-video-id: 8pJGcONO-Qk
 thumbnail: dreams-thumbnail.png
 alt: image-alt
 tools: Godot / GDscript
