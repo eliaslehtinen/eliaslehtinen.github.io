@@ -1,0 +1,14 @@
+---
+title: Don't Say
+subtitle: Game development
+layout: default
+modal-id: 1
+img: dreams.png
+thumbnail: dreams-thumbnail.png
+alt: image-alt
+tools: Godot / GDscript
+role: Game logic programming
+project-date: January 2025
+description: This game was created in one weekend for the Finnish Game Jam 2025. We were a team of four where I was one of two programmers.
+
+---
