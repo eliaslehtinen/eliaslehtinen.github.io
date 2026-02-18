@@ -15,7 +15,7 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"> -->
-                            <iframe height="405" width="720" allowfullscreen="allowfullscreen" src="https://youtube.com/embed/{{post.youtube-video-id}}" alt="{{ post.alt }}"></iframe>
+                            <iframe height="350" width="100%" allowfullscreen="allowfullscreen" src="https://youtube.com/embed/{{post.youtube-video-id}}" alt="{{ post.alt }}"></iframe>
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>Tools:
@@ -28,7 +28,7 @@
                                     <strong>{{ post.project-date }}</strong>
                                 </li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" onclick="javascript::player.api('pause')" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
