@@ -5,9 +5,10 @@ layout: default
 modal-id: 1
 date: 2025-01-26
 img: dreams.png
-youtube-video-id: 8pJGcONO-Qk
-thumbnail: dreams-thumbnail.png
 alt: image-alt
+youtube-video-id: 8pJGcONO-Qk
+video-alt-text: Video of a 3D-game where the player can see what characters are saying and has to hit those that are talking about certain topics.
+thumbnail: dreams-thumbnail.png
 tools: Godot / GDscript
 role: Game logic programming
 project-date: January 2025
