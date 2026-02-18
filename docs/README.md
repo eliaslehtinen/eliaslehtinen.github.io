@@ -1,4 +1,6 @@
-Agency Jekyll theme
+Portfolio website based on Agency Jekyll theme
+====================
+More about Agency:
 ====================
 
 Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
