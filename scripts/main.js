@@ -14,17 +14,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
   let currentSlide = 0;
 
   filters.forEach(btn=>btn.addEventListener('click', ()=>{
-    filters.forEach(b=>b.classList.remove('active'));
+    filters.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
     const f = btn.dataset.filter;
     cards.forEach(c=>{ c.style.display=(f==='all' || c.dataset.type===f)?'flex':'none' });
   }));
 
-  function createCarousel(imageList){
+  function createCarousel(imageList, title){
     slides = imageList.slice();
     currentSlide = 0;
     const container = document.createElement('div'); container.className='carousel';
-    const img = document.createElement('img'); img.className='carousel-image'; img.src = slides[0]; img.alt='';
+    const img = document.createElement('img'); img.className='carousel-image'; img.src = slides[0]; img.alt = title ? `${title} screenshot 1` : '';
     container.appendChild(img);
     const controls = document.createElement('div'); controls.className='carousel-controls';
     const prev = document.createElement('button'); prev.className='carousel-btn prev'; prev.setAttribute('aria-label','Previous'); prev.innerHTML='◀';
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       if(slides.length===0) return;
       currentSlide = (currentSlide + delta + slides.length) % slides.length;
       img.src = slides[currentSlide];
+      if(title) img.alt = `${title} screenshot ${currentSlide+1}`;
     }
 
     prev.addEventListener('click', ()=>showSlide(-1));
@@ -80,15 +82,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     modalMedia.innerHTML = '';
     slides = [];
     currentSlide = 0;
-    if(card.dataset.youtube){
+      if(card.dataset.youtube){
       const iframe = document.createElement('iframe');
       iframe.src = card.dataset.youtube;
       iframe.width = '100%'; iframe.height = '360'; iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; iframe.setAttribute('allowfullscreen','');
+      iframe.setAttribute('title', `${card.dataset.title || 'Video'} demo`);
       modalMedia.appendChild(iframe);
     } else if(card.dataset.images){
       const list = card.dataset.images.split(',').map(s=>s.trim()).filter(Boolean);
       if(list.length>1){
-        modalMedia.appendChild(createCarousel(list));
+        modalMedia.appendChild(createCarousel(list, card.dataset.title));
       } else {
         const img = document.createElement('img'); img.src = list[0]; img.alt = card.dataset.title||''; img.style.maxWidth='100%'; modalMedia.appendChild(img);
       }
