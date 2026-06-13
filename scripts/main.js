@@ -1,7 +1,64 @@
 // Basic interactivity: filters, open modal with content, embed youtube if present
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', async ()=>{
+  // Fetch and render projects
+  let projects = [];
+  try {
+    const resp = await fetch('data/projects.json');
+    projects = await resp.json();
+    renderCards(projects);
+  } catch (e) {
+    console.error('Failed to load projects:', e);
+  }
+
+  function renderCards(projectList) {
+    const grid = document.getElementById('projects');
+    grid.innerHTML = '';
+    projectList.forEach(proj => {
+      const article = document.createElement('article');
+      article.className = 'card';
+      article.setAttribute('role', 'button');
+      article.setAttribute('aria-label', `Open ${proj.type === 'experience' ? 'experience' : 'project'} ${proj.title}`);
+      article.setAttribute('tabindex', '0');
+      article.dataset.type = proj.type;
+      article.dataset.title = proj.title;
+      article.dataset.year = proj.year;
+      article.dataset.tech = proj.tech;
+      article.dataset.desc = proj.description;
+      article.dataset.images = proj.images.join(',');
+      if (proj.youtube) article.dataset.youtube = proj.youtube;
+      
+      const thumb = document.createElement('img');
+      thumb.className = 'thumb';
+      thumb.src = proj.images[0];
+      thumb.alt = `${proj.title} thumbnail`;
+      
+      const body = document.createElement('div');
+      body.className = 'card-body';
+      const title = document.createElement('h3');
+      title.className = 'card-title';
+      title.textContent = proj.title;
+      const meta = document.createElement('p');
+      meta.className = 'card-meta';
+      meta.textContent = `${proj.type === 'experience' ? 'Work Experience' : proj.type.charAt(0).toUpperCase() + proj.type.slice(1)} · ${proj.year}`;
+      
+      body.appendChild(title);
+      body.appendChild(meta);
+      article.appendChild(thumb);
+      article.appendChild(body);
+      grid.appendChild(article);
+    });
+    setupCardListeners();
+  }
+
+  function setupCardListeners() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => openCard(card));
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(card); } });
+    });
+  }
+
   const filters = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card');
   const modal = document.getElementById('modal');
   const modalTitle = document.getElementById('modal-title');
   const modalMeta = document.getElementById('modal-meta');
@@ -13,12 +70,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
   let slides = [];
   let currentSlide = 0;
 
-  filters.forEach(btn=>btn.addEventListener('click', ()=>{
-    filters.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+  function applyFilter(filterType) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(c => { c.style.display = (filterType === 'all' || c.dataset.type === filterType) ? 'flex' : 'none'; });
+  }
+
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    filters.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
     btn.classList.add('active');
-    btn.setAttribute('aria-pressed','true');
-    const f = btn.dataset.filter;
-    cards.forEach(c=>{ c.style.display=(f==='all' || c.dataset.type===f)?'flex':'none' });
+    btn.setAttribute('aria-pressed', 'true');
+    applyFilter(btn.dataset.filter);
   }));
 
   function createCarousel(imageList, title){
@@ -109,11 +170,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if(lastFocused && typeof lastFocused.focus==='function') lastFocused.focus();
   }
 
-  cards.forEach(card=>{
-    card.addEventListener('click', ()=>openCard(card));
-    card.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); openCard(card); } });
-  });
-
   modalClose.addEventListener('click', closeModal);
   modal.querySelector('[data-dismiss]').addEventListener('click', closeModal);
 });
+
+

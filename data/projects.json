@@ -1,0 +1,30 @@
+[
+  {
+    "id": "space-runner",
+    "type": "game",
+    "title": "Space Runner",
+    "year": "2024",
+    "tech": "Unity, C#",
+    "description": "A 2D endless runner with procedural levels.",
+    "images": ["assets/images/placeholder.svg"],
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": "taskflow",
+    "type": "software",
+    "title": "TaskFlow",
+    "year": "2023",
+    "tech": "TypeScript, Node.js",
+    "description": "A lightweight task automation CLI.",
+    "images": ["assets/images/placeholder.svg"]
+  },
+  {
+    "id": "acme-corp",
+    "type": "experience",
+    "title": "ACME Corp",
+    "year": "2021-2022",
+    "tech": "Backend",
+    "description": "Worked on payment infrastructure and reliability improvements.",
+    "images": ["assets/images/placeholder.svg"]
+  }
+]
