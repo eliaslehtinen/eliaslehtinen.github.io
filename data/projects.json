@@ -132,4 +132,29 @@
     ],
     "images": ["assets/images/phytoncide.png"]
   },
+  {
+    "id": "wanhat-walokuvat",
+    "type": "software",
+    "title": "Wanhat Walokuvat",
+    "year": "2024",
+    "tech": "JavaScript, React, Next.js, Tailwind CSS",
+    "role": "Programmer",
+    "description": "A web application for browsing old Finnish photographs made as part of a university project course. The app uses the Finna service of the National Library of Finland to fetch and display historical photos. The app allows you to browse photos by location and time period, and view details about each photo. There are also 3 games you have to guess the decade of the photo based on its content and style.",
+    "tasks": [
+      "UI implementation using React and Tailwind CSS",
+      "Game logic programming",
+      "Refactoring existing code and adding new features"
+    ],
+    "links": [
+      { "label": "Project Repo", "url": "https://github.com/JesseK13241/WanhatWalokuvat" },
+      { "label": "Deployed App", "url": "https://wanhat-walokuvat.vercel.app/" }
+    ],
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "Programmer" },
+      { "name": "Jesse Koskela", "role": "Programmer" },
+      { "name": "Petja Niskanen", "role": "Programmer" },
+      { "name": "Sofia Palola", "role": "Programmer" }
+    ],
+    "images": ["assets/images/wanhat-walokuvat.png"]
+  }
 ]
