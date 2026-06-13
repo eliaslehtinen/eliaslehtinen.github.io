@@ -48,4 +48,19 @@ Edit `data/projects.json` and add a new object to the array. Example:
 
 ## Deployment
 
-This repository is set up as a GitHub user site (`eliaslehtinen.github.io`). Push to the `main` branch and the site will publish automatically at `https://eliaslehtinen.github.io`.
+This repository is set up as a GitHub user site (`eliaslehtinen.github.io`).
+
+**Automatic deployment:**
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically deploys the site when you push to the `main` branch. The workflow:
+1. Checks out the repo
+2. Uploads static files to GitHub Pages
+3. Deploys to `https://eliaslehtinen.github.io`
+
+**Manual deployment:**
+After pushing changes to `main`, you can manually trigger the workflow from the Actions tab in your GitHub repository settings if needed.
+
+**Configuration:**
+Ensure GitHub Pages is configured to deploy from the GitHub Actions workflow:
+- Go to Settings > Pages
+- Source: Deploy from a branch
+- Select the `main` branch and `/root` folder, OR set "Build and deployment" to "GitHub Actions"
