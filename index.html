@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elias — Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Elias — Portfolio</h1>
+      <p class="site-sub">Games · Software · Experience</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" aria-label="Filters">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="game" class="filter-btn">Games</button>
+      <button data-filter="software" class="filter-btn">Software</button>
+      <button data-filter="experience" class="filter-btn">Experience</button>
+    </section>
+
+    <section id="projects" class="grid" aria-live="polite">
+      <!-- Example project card -->
+      <article class="card" data-type="game" tabindex="0" data-title="Space Runner" data-year="2024" data-tech="Unity, C#" data-desc="A 2D endless runner with procedural levels." data-images="assets/images/placeholder.svg" data-youtube="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <img class="thumb" src="assets/images/placeholder.svg" alt="Space Runner thumbnail">
+        <div class="card-body">
+          <h3 class="card-title">Space Runner</h3>
+          <p class="card-meta">Game · 2024</p>
+        </div>
+      </article>
+
+      <article class="card" data-type="software" tabindex="0" data-title="TaskFlow" data-year="2023" data-tech="TypeScript, Node.js" data-desc="A lightweight task automation CLI." data-images="assets/images/placeholder.svg">
+        <img class="thumb" src="assets/images/placeholder.svg" alt="TaskFlow thumbnail">
+        <div class="card-body">
+          <h3 class="card-title">TaskFlow</h3>
+          <p class="card-meta">Software · 2023</p>
+        </div>
+      </article>
+
+      <article class="card" data-type="experience" tabindex="0" data-title="ACME Corp" data-year="2021-2022" data-tech="Backend" data-desc="Worked on payment infrastructure and reliability improvements." data-images="assets/images/placeholder.svg">
+        <img class="thumb" src="assets/images/placeholder.svg" alt="ACME Corp thumbnail">
+        <div class="card-body">
+          <h3 class="card-title">ACME Corp</h3>
+          <p class="card-meta">Work Experience</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Elias — <a href="https://github.com/eliaslehtinen">GitHub</a></div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-dismiss></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-meta" class="muted"></p>
+        <div id="modal-media" class="media"></div>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
