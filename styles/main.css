@@ -18,6 +18,8 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue'
 .card-title{margin:0 0 .25rem;font-size:1rem}
 .card-meta{margin:0;color:var(--muted);font-size:.875rem}
 .card-role{margin:.5rem 0 0;color:#374151;font-size:.9rem;line-height:1.4;}
+.card-team-badge{margin:.35rem 0 0;color:#059669;font-size:.85rem;font-weight:500;}
+.card-solo-badge{margin:.35rem 0 0;color:#6b7280;font-size:.85rem;font-weight:500;}
 .site-footer{border-top:1px solid #e6e6e6;padding:1rem 0;margin-top:2rem;color:var(--muted)}
 
 /* Modal */
@@ -28,6 +30,10 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue'
 .modal-close{position:absolute;right:8px;top:8px;background:transparent;border:0;font-size:1.125rem;cursor:pointer}
 .media{margin:0.5rem 0}
 .modal-role{margin:0 0 .75rem;color:#374151;}
+.modal-team-label{margin:0.75rem 0 0.5rem;color:#1f2937;font-weight:600;font-size:.95rem;}
+.modal-team{margin:0.75rem 0;}
+.modal-contributors{margin:0;padding-left:1.25rem;list-style:disc;}
+.modal-contributors li{margin:0.35rem 0;color:#334155;}
 .modal-tasks-label{margin:0.75rem 0 0.5rem;padding-left:0;color:#1f2937;font-weight:600;font-size:.95rem;}
 .modal-tasks{margin:0;padding-left:1.25rem;list-style:disc;}
 .modal-tasks li{margin:0.35rem 0;color:#334155;}

@@ -5,54 +5,131 @@
     "title": "Alien Escape",
     "year": "2022",
     "tech": "C#",
-    "role": "Gameplay programmer",
+    "role": "Game Developer",
     "description": "A local co-op platformer where players escape an alien planet. Developed as an exercise during a programming course. Used Jypeli game library (by University of Jyväskylä) for physics and rendering.",
     "tasks": [
-      "Designed co-op movement and collision systems",
-      "Implemented enemy AI and level transitions",
-      "Balanced physics and platforming feel"
+      "Gameplay programming",
+      "UI implementation",
+      "Graphics and sounds"
     ],
     "links": [
-      { "label": "Video Demo", "url": "https://youtu.be/ikZqLpwwG-8" },
-      { "label": "Source (placeholder)", "url": "https://github.com/eliaslehtinen/alien-escape" }
+      { "label": "Video Demo", "url": "https://youtu.be/ikZqLpwwG-8" }
     ],
-    "images": ["assets/images/placeholder.svg"],
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "Programming, Sounds, Graphics" },
+      { "name": "Juuso Piippo", "role": "Programming, Story, Level Design" }
+    ],
+    "images": ["assets/images/alien_escape.png"],
     "youtube": "https://www.youtube.com/embed/ikZqLpwwG-8"
   },
   {
-    "id": "taskflow",
-    "type": "software",
-    "title": "TaskFlow",
-    "year": "2023",
-    "tech": "TypeScript, Node.js",
-    "role": "Full-stack developer",
-    "description": "A lightweight task automation CLI.",
+    "id": "beneath-the-mines",
+    "type": "game",
+    "title": "Beneath the Mines",
+    "year": "2024-2025",
+    "tech": "Godot, Audacity",
+    "role": "Sound Designer",
+    "description": "A game prototype made for a University of Jyväskylä game development course. A 2D platformer where players explore underground mines and solve puzzles. I created all the sound effects using Audacity, including mining sounds, ambient cave noises, and character actions.",
     "tasks": [
-      "Built command parsing and workflow execution",
-      "Created plugin support for developer tools",
-      "Documented usage and release process"
+      "Designed and recorded/created all sound effects for the game",
+      "Programmed sound integration and logic in Godot engine"
     ],
     "links": [
-      { "label": "Project Repo", "url": "https://github.com/eliaslehtinen/taskflow" }
+      { "label": "Project Repo", "url": "https://github.com/mentlegan/HTKA114_peliprojekti" },
+      { "label": "Game in Itch.io", "url": "https://mentlegan.itch.io/beneath-the-mines" }
     ],
-    "images": ["assets/images/placeholder.svg"]
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "Sound Designer" },
+      { "name": "Samiin Agampodi", "role": "Producer" },
+      { "name": "Heidi Hakala", "role": "Graphics Designer" },
+      { "name": "Juuso Piippo", "role": "Programming, Game Design" },
+      { "name": "Patrik Hägg", "role": "Programming, Game Design" },
+      { "name": "Paavo Pörhö", "role": "Programmer" },
+      { "name": "Harri Keränen", "role": "Programmer" }
+    ],
+    "images": ["assets/images/beneath_the_mines.png"]
   },
   {
-    "id": "acme-corp",
-    "type": "experience",
-    "title": "ACME Corp",
-    "year": "2021-2022",
-    "tech": "Backend",
-    "role": "Backend engineer",
-    "description": "Worked on payment infrastructure and reliability improvements.",
+    "id": "dont-say",
+    "type": "game",
+    "title": "Don't Say",
+    "year": "2025",
+    "tech": "Godot, GDScript",
+    "role": "Game Programmer",
+    "description": "A game made for the Global Game Jam 2025 (theme: Bubbles). A 3D game where you are an officer of a dictatorial state tasked with regulating speech. Punish or reward citizens based on their opinions. Look for negative and positive emojis first to determine the action.",
     "tasks": [
-      "Improved service availability and error handling",
-      "Built APIs for transaction processing",
-      "Collaborated with frontend and QA teams"
+      "Speech bubble system implementation",
+      "Finding and selecting emojis"
     ],
     "links": [
-      { "label": "Company site", "url": "https://www.acme-corp.example" }
+      { "label": "Project Repo", "url": "https://github.com/JuJuz1/FGJ2025" },
+      { "label": "Video Demo", "url": "https://youtu.be/8pJGcONO-Qk" },
+      { "label": "Game in Itch.io", "url": "https://jujuz.itch.io/dont-say" },
+      { "label": "GGJ Page", "url": "https://globalgamejam.org/games/2025/dont-say-7" }
     ],
-    "images": ["assets/images/placeholder.svg"]
-  }
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "Programmer" },
+      { "name": "Juuso Piippo", "role": "Programmer, Game Designer" },
+      { "name": "Eetu Rantakangas", "role": "3D and Level Designer" },
+      { "name": "Samiin Agampodi", "role": "Game Designer, Sound Designer" }
+    ],
+    "images": ["assets/images/dont_say.png"],
+    "youtube":"https://www.youtube.com/embed/8pJGcONO-Qk"
+  },
+  {
+    "id": "ctrl-x",
+    "type": "game",
+    "title": "Ctrl-X (Control-X)",
+    "year": "2026",
+    "tech": "Godot, GDScript",
+    "role": "Game Programmer",
+    "description": "A game made for the Global Game Jam 2026 (theme: Mask). Take the role of a medieval executioner and control the axe as you send criminals to the other side. Your objective is to do your job quick and clean despite the fact you can barely see under your executioners hood. Failure is not an option unless you want to be next on the block.",
+    "tasks": [
+      "Programming"
+    ],
+    "links": [
+      { "label": "Project Repo", "url": "https://github.com/eliaslehtinen/FGJ2026" },
+      { "label": "Video Demo", "url": "https://youtu.be/KQuMtvGjNDE" },
+      { "label": "Game in Itch.io", "url": "https://jujuz.itch.io/controlx" },
+      { "label": "GGJ Page", "url": "https://globalgamejam.org/games/2026/ctrlx-8" }
+    ],
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "Programmer" },
+      { "name": "Juuso Piippo", "role": "Programmer, Game Designer" },
+      { "name": "Eetu Rantakangas", "role": "3D and Level Designer" },
+      { "name": "Lauri Inki", "role": "3D and Level Designer" },
+      { "name": "Samiin Agampodi", "role": "Game Designer, Sound Designer" }
+    ],
+    "images": ["assets/images/ctrl_x.png"],
+    "youtube":"https://www.youtube.com/embed/KQuMtvGjNDE"
+  },
+  {
+    "id": "phytoncide",
+    "type": "game",
+    "title": "Phytoncide",
+    "year": "2026",
+    "tech": "Unreal Engine 5, Blueprints, WWise",
+    "role": "Lead Programmer",
+    "description": "A game prototype made for a University of Jyväskylä advanced game development course. A 3D horror game where you have to survive in a lab infested with mutant plants. You have a tape recorder that can record and play back sounds. Use it to solve puzzles and escape the lab.",
+    "tasks": [
+      "Architecting and programming the core gameplay mechanics using Unreal Engine 5 Blueprints",
+      "Implementing sound recording and playback system using WWise",
+      "Enemy AI programming",
+      "Inventory system",
+      "Helping others with Git and general programming tasks"
+    ],
+    "links": [
+      { "label": "Game in Itch.io", "url": "https://karitvu.itch.io/phytoncide" }
+    ],
+    "contributors": [
+      { "name": "Elias Lehtinen (me)", "role": "(Lead) Programmer" },
+      { "name": "Leo Ketola", "role": "Producer, Programmer" },
+      { "name": "Liisa Kalpio", "role": "Graphics Designer" },
+      { "name": "Noe Viianen", "role": "Graphics Designer, Programmer" },
+      { "name": "Olli Luoma", "role": "Sound Designer" },
+      { "name": "Topi Kari", "role": "Game Designer, Programmer" },
+      { "name": "Niklas Niemi", "role": "Programmer" }
+    ],
+    "images": ["assets/images/phytoncide.png"]
+  },
 ]

@@ -53,6 +53,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         roleText.textContent = `Role: ${proj.role}`;
         body.appendChild(roleText);
       }
+      if (Array.isArray(proj.contributors) && proj.contributors.length > 1) {
+        const teamBadge = document.createElement("p");
+        teamBadge.className = "card-team-badge";
+        teamBadge.textContent = `👥 Team (${proj.contributors.length})`;
+        body.appendChild(teamBadge);
+      } else if (
+        !Array.isArray(proj.contributors) ||
+        proj.contributors.length === 0
+      ) {
+        const soloBadge = document.createElement("p");
+        soloBadge.className = "card-solo-badge";
+        soloBadge.textContent = "Solo";
+        body.appendChild(soloBadge);
+      }
       article.appendChild(thumb);
       article.appendChild(body);
       grid.appendChild(article);
@@ -218,6 +232,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("modal-role").textContent = project.role
       ? `Role: ${project.role}`
       : "";
+    document.getElementById("modal-team").innerHTML = "";
+    if (Array.isArray(project.contributors) && project.contributors.length) {
+      const teamContainer = document.getElementById("modal-team");
+      const label = document.createElement("p");
+      label.className = "modal-team-label";
+      label.textContent = `Team (${project.contributors.length}):`;
+      teamContainer.appendChild(label);
+      const list = document.createElement("ul");
+      list.className = "modal-contributors";
+      project.contributors.forEach((contributor) => {
+        const item = document.createElement("li");
+        item.innerHTML = `<strong>${contributor.name}</strong> — ${contributor.role}`;
+        list.appendChild(item);
+      });
+      teamContainer.appendChild(list);
+    }
     modalDesc.textContent = project.description || "";
     modalMedia.innerHTML = "";
     document.getElementById("modal-tasks").innerHTML = "";
