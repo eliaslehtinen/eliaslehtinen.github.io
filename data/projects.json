@@ -1,13 +1,23 @@
 [
   {
-    "id": "space-runner",
+    "id": "alien-escape",
     "type": "game",
-    "title": "Space Runner",
-    "year": "2024",
-    "tech": "Unity, C#",
-    "description": "A 2D endless runner with procedural levels.",
+    "title": "Alien Escape",
+    "year": "2022",
+    "tech": "C#",
+    "role": "Gameplay programmer",
+    "description": "A local co-op platformer where players escape an alien planet. Developed as an exercise during a programming course. Used Jypeli game library (by University of Jyväskylä) for physics and rendering.",
+    "tasks": [
+      "Designed co-op movement and collision systems",
+      "Implemented enemy AI and level transitions",
+      "Balanced physics and platforming feel"
+    ],
+    "links": [
+      { "label": "Video Demo", "url": "https://youtu.be/ikZqLpwwG-8" },
+      { "label": "Source (placeholder)", "url": "https://github.com/eliaslehtinen/alien-escape" }
+    ],
     "images": ["assets/images/placeholder.svg"],
-    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "youtube": "https://www.youtube.com/embed/ikZqLpwwG-8"
   },
   {
     "id": "taskflow",
@@ -15,7 +25,16 @@
     "title": "TaskFlow",
     "year": "2023",
     "tech": "TypeScript, Node.js",
+    "role": "Full-stack developer",
     "description": "A lightweight task automation CLI.",
+    "tasks": [
+      "Built command parsing and workflow execution",
+      "Created plugin support for developer tools",
+      "Documented usage and release process"
+    ],
+    "links": [
+      { "label": "Project Repo", "url": "https://github.com/eliaslehtinen/taskflow" }
+    ],
     "images": ["assets/images/placeholder.svg"]
   },
   {
@@ -24,7 +43,16 @@
     "title": "ACME Corp",
     "year": "2021-2022",
     "tech": "Backend",
+    "role": "Backend engineer",
     "description": "Worked on payment infrastructure and reliability improvements.",
+    "tasks": [
+      "Improved service availability and error handling",
+      "Built APIs for transaction processing",
+      "Collaborated with frontend and QA teams"
+    ],
+    "links": [
+      { "label": "Company site", "url": "https://www.acme-corp.example" }
+    ],
     "images": ["assets/images/placeholder.svg"]
   }
 ]

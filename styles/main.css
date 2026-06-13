@@ -17,6 +17,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue'
 .card-body{padding:.75rem}
 .card-title{margin:0 0 .25rem;font-size:1rem}
 .card-meta{margin:0;color:var(--muted);font-size:.875rem}
+.card-role{margin:.5rem 0 0;color:#374151;font-size:.9rem;line-height:1.4;}
 .site-footer{border-top:1px solid #e6e6e6;padding:1rem 0;margin-top:2rem;color:var(--muted)}
 
 /* Modal */
@@ -26,6 +27,14 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue'
 .modal-panel{background:#fff;border-radius:8px;max-width:900px;width:94%;max-height:90vh;overflow:auto;padding:1rem;position:relative;z-index:2}
 .modal-close{position:absolute;right:8px;top:8px;background:transparent;border:0;font-size:1.125rem;cursor:pointer}
 .media{margin:0.5rem 0}
+.modal-role{margin:0 0 .75rem;color:#374151;}
+.modal-tasks-label{margin:0.75rem 0 0.5rem;padding-left:0;color:#1f2937;font-weight:600;font-size:.95rem;}
+.modal-tasks{margin:0;padding-left:1.25rem;list-style:disc;}
+.modal-tasks li{margin:0.35rem 0;color:#334155;}
+.modal-links-label{margin:1rem 0 0.5rem;color:#1f2937;font-weight:600;font-size:.95rem;}
+.link-group{display:flex;flex-wrap:wrap;gap:.5rem;}
+.link-pill{display:inline-block;padding:.45rem .75rem;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:.9rem;}
+.link-pill:hover{background:rgba(37,99,235,.08);}
 .muted{color:var(--muted)}
 
 @media (prefers-color-scheme:dark){
