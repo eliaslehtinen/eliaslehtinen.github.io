@@ -34,3 +34,11 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue'
   .site-header,.site-footer{border-color:#0f1724}
   .modal-panel{background:#071029}
 }
+
+/* Carousel styles */
+.carousel{position:relative;border-radius:6px;overflow:hidden;background:#f8fafc}
+.carousel-image{width:100%;height:auto;display:block}
+.carousel-controls{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 8px}
+.carousel-btn{background:rgba(0,0,0,0.45);border:0;color:#fff;padding:.4rem .6rem;border-radius:6px;cursor:pointer}
+.carousel-btn:focus{outline:2px solid rgba(37,99,235,.3)}
+
